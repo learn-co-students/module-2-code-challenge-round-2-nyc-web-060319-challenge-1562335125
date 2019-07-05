@@ -3,9 +3,11 @@ class AppearancesController < ApplicationController
     # byebug
     @new_appearance = Appearance.new(appearances_params(params))
     if @new_appearance.valid?
-      @new_appearance.save
-      redirect_to episode_path(@new_appearance)
+      @new_appearance.save!
+      byebug
+      redirect_to episode_path(@new_appearance.episode)
     else
+      byebug
       render :new
     end
   end

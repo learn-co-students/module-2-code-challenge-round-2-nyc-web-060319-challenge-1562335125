@@ -16,4 +16,8 @@ class EpisodesController < ApplicationController
     @episode = Episode.find(params[:id])
     # byebug
   end
+
+  def update
+    byebug
+  end
 end
