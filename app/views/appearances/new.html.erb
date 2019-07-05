@@ -1,0 +1,15 @@
+<h1>Create appearance</h1>
+
+
+<%=form_tag '/appearances' do%>
+    <label>Guest:</label>
+    <%=select_tag 'appearance[guest_id]', options_from_collection_for_select(@guests, 'id', 'name')%>
+
+    <label>Episode:</label>
+    <%=select_tag 'appearance[episode_id]', options_from_collection_for_select(@episodes, 'id', 'date')%>
+
+    <label>Rating:</label>
+    <%=number_field_tag 'appearance[rating]', nil, min: 1, max: 5%>
+
+    <%=submit_tag%>
+<%end%>
