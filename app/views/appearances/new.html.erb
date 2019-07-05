@@ -1,0 +1,15 @@
+<h1>New Appearance</h1>
+<br>
+<%=form_for @appearance do |f|%>
+<label>Guest</label>
+<%=collection_select(:appearance, :guest_id, Guest.all, :id, :name, prompt: true)%>
+<br>
+<label>Episode</label>
+<%=collection_select(:appearance, :episode_id, Episode.all, :id, :number, prompt: true)%>
+<br>
+<label>Please give this guest a rating between 1 and 5 for this episode.</label>
+<br>
+<%=f.number_field :rating%>
+<br>
+<%=f.submit%>
+<% end %>
