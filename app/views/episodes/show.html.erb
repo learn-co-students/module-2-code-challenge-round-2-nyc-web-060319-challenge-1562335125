@@ -1,0 +1,14 @@
+<h1> Episode Number <%=@episode.number %> </h1><br>
+
+<!-- Works I think -->
+<!-- Display each guest.  -->
+<ul>
+<% Appearance.all.each do |a| %>
+    <% if a.episode_id == @episode.number  %>
+        <% g = Guest.find(a.guest_id) %>
+        <li><%= g.name %></li>
+    <% end%>
+
+<%end%>
+</ul>
+<!-- Could refactor better but I think it's working.  -->
