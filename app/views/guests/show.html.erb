@@ -1,0 +1,11 @@
+<h1><%=@guest.name%></h1>
+<br>
+<h3>Occupation: <%=@guest.occupation%></h3>
+<br>
+<h3>Episodes on which <%=@guest.name%> has appeared
+<%@guest.episodes.each do |episode|%>
+<br>
+<%=link_to episode.number, episode_path(episode)%>
+
+<% end %>
+</h3>
