@@ -1,0 +1,5 @@
+<%= "Episode #{@episode.number} - #{@episode.date.strftime("%B %d, %Y")}"%>
+<h1>List of guests:</h1>
+<% @episode.guest each do |x| %>
+<%= x.name %>
+<%end%>

@@ -1,0 +1,13 @@
+<h1>Create New Episodes</h1>
+
+<%=form_for @episode do |f|%>
+<%=f.label :date%>
+<%=f.text_field :date%>
+
+<%=f.label :number%>
+<%=f.text_field :number%>
+
+<%=f.collection_select :guest_id, @guests, :id, :name, prompt: true%>
+
+
+<%=f.submit "Submit"%>

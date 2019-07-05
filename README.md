@@ -27,7 +27,7 @@ Luckily, another developer has already started the job. We have a model for gues
 
 ![Form for relating an episode and a guest](form.gif)
 
-3. On the guests index page, clicking on a guest's name should take us to a **detail view about each guest**. This View should **include the guest's name and occupation**.
+<!-- 3. On the guests index page, clicking on a guest's name should take us to a **detail view about each guest**. This View should **include the guest's name and occupation**. -->
 
 ![Showing what happens when we click on a click on the Guest Index page](guest_index_to_show.gif)
 
