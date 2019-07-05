@@ -21,7 +21,10 @@ end
 date = Date.parse('2015-09-08')
 
 (1..40).each do |num|
-  Episode.create(date: date, number: num)
+  Episode.find_or_create_by(date: date, number: num)
   date = date.next
 end
 
+Episode.all.each do |episode|
+  # Appearance.find_or_create_by
+end
